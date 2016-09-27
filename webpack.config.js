@@ -10,6 +10,8 @@ const config = {
   resolve: {
     extensions: ['', '.jsx', '.js']
   },
+  devServer: { inline: true },
+
   output: {
     path: './dist',
     filename: 'app.js'
