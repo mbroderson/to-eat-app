@@ -1,13 +1,17 @@
 import React from 'react';
-import ToEatContainer from './toeat-container';
+import {Provider} from 'react-redux';
+import store from 'stores';
+import ToEatContainer from 'components/toeat-container';
 
 class App extends React.Component {
   render () {
     return (
-      <div>
-        <h1>To Eat App</h1>
-        <ToEatContainer />
-      </div>
+      <Provider store={store}>
+        <div>
+          <h1>To Eat App</h1>
+          <ToEatContainer />
+        </div>
+      </Provider>
     );
   }
 }
