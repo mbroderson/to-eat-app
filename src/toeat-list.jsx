@@ -3,19 +3,23 @@ import ToEatItem from './toeat-list-item';
 
 class ToEatList extends React.Component {
   render () {
-    const {toeats, onCheckItem} = this.props;
+    const {toeats, onCheckItem, onRemoveItem} = this.props;
 
     return (
-      <ul style={styles.list}>
-        {
-          toeats.map((te, index) => {
-            return <ToEatItem
-                      onCheck={() => onCheckItem(index)}
-                      key={`item-${index}`}
-                      {...te} />
-          })
-        }
-      </ul>
+      <div>
+        <h2>ToEat list</h2>
+        <ul style={styles.list}>
+          {
+            toeats.map((te, index) => {
+              return <ToEatItem
+                onCheck={() => onCheckItem(index)}
+                onRemove={() => onRemoveItem(index)}
+                key={`item-${index}`}
+                {...te} />
+            })
+          }
+        </ul>
+      </div>
     );
   }
 }
