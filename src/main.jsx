@@ -1,13 +1,14 @@
 import React from 'react';
+import ToeatList from './toeat-list';
 
-class App extends React.Component {
+class Main extends React.Component {
   render () {
     return (
       <div>
-        Reload test
+        <ToeatList />
       </div>
     );
   }
 }
 
-export default App;
+export default Main;
