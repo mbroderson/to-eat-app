@@ -14,7 +14,7 @@ export default class ToeatListItem extends React.Component {
   }
 
   render(){
-    const {name} = this.props;
+    const {name, onRemove} = this.props;
     const {eaten} = this.state;
     return (
       <li style={{backgroundColor: eaten ? 'red' : 'green', color: 'white', padding: '5px 15px', marginBottom: 10, display: 'flex', justifyContent: 'space-between' }}>
@@ -22,6 +22,7 @@ export default class ToeatListItem extends React.Component {
         <div>
           <label> eaten:</label>
           <input type='checkbox' checked={eaten} onClick={this.toggleChecbkox}/>
+          <button onClick={onRemove}>remove</button>
         </div>
       </li>
     );
